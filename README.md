@@ -34,3 +34,8 @@ de régua de ordem 4.<br/>
 14 . --<br/>
 15 . -<br/>
 16 .
+
+## Ulam
+
+Algoritmo que faz um teste exaustivo
+<br/>em um intervalo (1 a 65535) sempre obtendo a Conjectura de Collatz
