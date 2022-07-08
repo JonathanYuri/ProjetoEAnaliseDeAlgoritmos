@@ -7,9 +7,13 @@ void ImprimirMatriz(int mat[][8])
     {
         for (int j = 0; j < 8; j++)
         {
-            printf("%i ", mat[i][j]);
+            if (mat[i][j] / 10 < 1)
+            {
+                printf("0");
+            }
+            printf("%i  ", mat[i][j]);
         }
-        printf("\n");
+        printf("\n\n");
     }
 }
 
