@@ -17,12 +17,12 @@ void ImprimirMatriz(int mat[][8])
     }
 }
 
-int Cavalo(int mat[][8], int k, int x, int y, int movx[], int movy[])
+void Cavalo(int mat[][8], int k, int x, int y, int movx[], int movy[])
 {
     if (k == 65)
     {
-        //exit(0);
-        return 1;
+        ImprimirMatriz(mat);
+        exit(0);
     }
     
     int l = 0;
@@ -34,18 +34,12 @@ int Cavalo(int mat[][8], int k, int x, int y, int movx[], int movy[])
         if (x1 >= 0 && x1 <= 7 && y1 >= 0 && y1 <= 7 && mat[x1][y1] == -1)
         {
             mat[x1][y1] = k;
-            int a = Cavalo(mat, k+1, x1, y1, movx, movy);
-            if (a == 1)
-            {
-                return 1;
-            }
+            Cavalo(mat, k+1, x1, y1, movx, movy);
             mat[x1][y1] = -1;
         }
         
         l++;
     }
-    
-    return 0;
 }
 
 int main()
@@ -66,7 +60,6 @@ int main()
     int movy[8] = {2, 1, -1, -2, -2, -1, 1, 2};
     
     Cavalo(mat, 2, 0, 0, movx, movy);
-    ImprimirMatriz(mat);
     
     return 0;
 }
