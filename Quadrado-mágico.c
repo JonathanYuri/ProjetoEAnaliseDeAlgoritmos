@@ -135,6 +135,7 @@ void QM(int q[][3], int k, int usados[])
             printf("\n");
         }
         printf("\n");
+        return;
     }
     int l = 1;
     while (l <= 9)
